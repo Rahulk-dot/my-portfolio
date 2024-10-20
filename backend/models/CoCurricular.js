@@ -1,28 +1,28 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const CoCurricularSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
   phoneNumber: {
     type: String,
     required: true,
-    unique: true,
+    unique: true
   },
   designation: {
     type: String,
-    required: true,
+    required: true
   },
   user: {
-    type: String,
+    type: String
   },
   document: {
-    type: String,
+    type: String
   },
   email: {
-    type: String,
-  },
+    type: String
+  }
 });
 
-module.exports = mongoose.model("CoCurricular", CoCurricularSchema);
+module.exports = mongoose.model('CoCurricular', CoCurricularSchema);
