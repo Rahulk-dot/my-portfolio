@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "No test needed I know it's good"
+  },
+  "keywords": [
+    "portfolio",
+    "personal website",
+    "web developer"
+  ],
+  "author": "Rahul Kaushik",
+  "license": "ISC",
+  "description": "My own portfolio",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.2"
+  }
+}
