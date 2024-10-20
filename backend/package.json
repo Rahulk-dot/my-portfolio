@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "No test needed I know it's good"
+    "test": "No test needed I know it's good",
+    "format": "js-beautify './**/*.js'"
   },
   "keywords": [
     "portfolio",

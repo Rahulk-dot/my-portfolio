@@ -4,31 +4,31 @@ const CarrerSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-      },
-      description: {
+    },
+    description: {
         type: String,
         required: true,
-      },
-      companyPlace:{
+    },
+    companyPlace: {
         type: String,
         required: true,
-      },
-      startDate:{
+    },
+    startDate: {
         type: Date,
         required: true,
-      },
-      endDate:{
+    },
+    endDate: {
         type: Date,
-      },
-      companyLink:{
+    },
+    companyLink: {
         type: String,
-      },
-      user:{
+    },
+    user: {
         type: String,
-      },
-      document: {
+    },
+    document: {
         type: String,
-      },
+    },
 });
 
 module.exports = mongoose.model('Carrer', CarrerSchema);
