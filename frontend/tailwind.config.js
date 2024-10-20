@@ -1,13 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}",],
-  theme: {
-    extend: {
-      fontFamily:{
-        customElements:['Cinzel','serif'],
-      }
+    content: ["./src/**/*.{js,jsx,ts,tsx}", ],
+    theme: {
+        extend: {
+            fontFamily: {
+                customElements: ['Cinzel', 'serif'],
+            }
+        },
     },
-  },
-  plugins: [],
+    plugins: [],
 }
-
