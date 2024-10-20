@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "No test needed I know it's good",
-    "format": "js-beautify './**/*.js'"
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx}'"
   },
   "keywords": [
     "portfolio",
