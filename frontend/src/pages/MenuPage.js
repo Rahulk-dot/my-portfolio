@@ -20,8 +20,8 @@ const MenuPage = () => {
     navigate("/about-me");
   };
 
-  const handleCarrerClick = () => {
-    navigate("/carrer");
+  const handleCareerClick = () => {
+    navigate("/career");
   };
 
   return (
@@ -43,9 +43,9 @@ const MenuPage = () => {
           {" "}
           About Me{" "}
         </li>{" "}
-        <li className="text-8xl p-5" onClick={handleCarrerClick}>
+        <li className="text-8xl p-5" onClick={handleCareerClick}>
           {" "}
-          Carrer{" "}
+          Career{" "}
         </li>{" "}
       </ol>{" "}
     </div>

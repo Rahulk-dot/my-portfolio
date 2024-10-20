@@ -6,7 +6,7 @@ import ProjectPage from "./pages/ProjectPage";
 import EducationPage from "./pages/EducationPage";
 import CoCurricularPage from "./pages/CoCurricularPage";
 import AboutMePage from "./pages/AboutMePage";
-import CarrerPage from "./pages/CarrerPage";
+import CareerPage from "./pages/CareerPage";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/education" element={<EducationPage />} />{" "}
         <Route path="/co-curricular" element={<CoCurricularPage />} />{" "}
         <Route path="/about-me" element={<AboutMePage />} />{" "}
-        <Route path="/carrer" element={<CarrerPage />} />{" "}
+        <Route path="/career" element={<CareerPage />} />{" "}
       </Routes>{" "}
     </Router>
   );
