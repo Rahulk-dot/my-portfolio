@@ -1,53 +1,48 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const MenuPage = () => {
   const navigate = useNavigate();
 
   const handleEducationClick = () => {
-    navigate("/education");
+    navigate('/education');
   };
 
   const handleProjectClick = () => {
-    navigate("/project");
+    navigate('/project');
   };
 
   const handleCoCurricularClick = () => {
-    navigate("/co-curricular");
+    navigate('/co-curricular');
   };
 
   const handleAboutMeClick = () => {
-    navigate("/about-me");
+    navigate('/about-me');
   };
 
-  const handleCarrerClick = () => {
-    navigate("/carrer");
+  const handleCareerClick = () => {
+    navigate('/career');
   };
 
   return (
     <div className="h-screen w-full bg-black text-white flex overflow-x-auto items-center font-customElements">
       <ol>
         <li className="text-8xl p-5" onClick={handleEducationClick}>
-          {" "}
-          Education{" "}
-        </li>{" "}
+          Education
+        </li>
         <li className="text-8xl p-5" onClick={handleProjectClick}>
-          {" "}
-          Projects{" "}
-        </li>{" "}
+          Projects
+        </li>
         <li className="text-8xl p-5" onClick={handleCoCurricularClick}>
-          {" "}
-          Co - Curricular{" "}
-        </li>{" "}
+          Co - Curricular
+        </li>
         <li className="text-8xl p-5" onClick={handleAboutMeClick}>
-          {" "}
-          About Me{" "}
-        </li>{" "}
-        <li className="text-8xl p-5" onClick={handleCarrerClick}>
-          {" "}
-          Carrer{" "}
-        </li>{" "}
-      </ol>{" "}
+          About Me
+        </li>
+        <li className="text-8xl p-5" onClick={handleCareerClick}>
+          Career
+        </li>
+      </ol>
     </div>
   );
 };

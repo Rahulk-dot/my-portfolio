@@ -1,4 +1,4 @@
-const Project = require("../models/Project");
+const Project = require('../models/Project');
 
 // Create a new project
 exports.createProject = async (req, res) => {
@@ -8,7 +8,7 @@ exports.createProject = async (req, res) => {
     res.status(201).json(newItem);
   } catch (error) {
     res.status(500).json({
-      message: error.message,
+      message: error.message
     });
   }
 };
@@ -20,7 +20,7 @@ exports.getAllProjects = async (req, res) => {
     res.json(items);
   } catch (error) {
     res.status(500).json({
-      message: error.message,
+      message: error.message
     });
   }
 };

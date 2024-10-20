@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
 
-const EducationSchema = new mongoose.Schema({
-  schoolName: {
+const CareerSchema = new mongoose.Schema({
+  title: {
     type: String,
     required: true
   },
-  degree: {
+  description: {
+    type: String,
+    required: true
+  },
+  companyPlace: {
     type: String,
     required: true
   },
@@ -16,15 +20,15 @@ const EducationSchema = new mongoose.Schema({
   endDate: {
     type: Date
   },
-  schoolPlace: {
-    type: String
-  },
-  description: {
+  companyLink: {
     type: String
   },
   user: {
     type: String
+  },
+  document: {
+    type: String
   }
 });
 
-module.exports = mongoose.model('Education', EducationSchema);
+module.exports = mongoose.model('Career', CareerSchema);

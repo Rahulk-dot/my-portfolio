@@ -1,7 +1,7 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const projectRoutes = require("./routes/projectRoutes");
-const { connectDB } = require("./config/db");
+const projectRoutes = require('./routes/projectRoutes');
+const { connectDB } = require('./config/db');
 
 // Middleware
 app.use(express.json());
@@ -10,10 +10,10 @@ app.use(express.json());
 connectDB();
 
 // Routes
-app.use("/project", projectRoutes);
+app.use('/project', projectRoutes);
 
 // Error handling middleware
-app.use(require("./middlewares/errorHandler"));
+app.use(require('./middlewares/errorHandler'));
 
 // Start the server
 const PORT = process.env.PORT || 3001;
