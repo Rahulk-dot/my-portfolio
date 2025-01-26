@@ -7,6 +7,8 @@ import EducationPage from './pages/EducationPage';
 import CoCurricularPage from './pages/CoCurricularPage';
 import AboutMePage from './pages/AboutMePage';
 import CareerPage from './pages/CareerPage';
+import PortfolioProjectPage from './components/PortfolioProjectPage';
+import ProjectMenuPage from './pages/ProjectMenuPage';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/co-curricular" element={<CoCurricularPage />} />
         <Route path="/about-me" element={<AboutMePage />} />
         <Route path="/career" element={<CareerPage />} />
+        <Route path="/portfolio-project" element={<PortfolioProjectPage />} />
+        <Route path="/project-menu" element={<ProjectMenuPage />} />
       </Routes>
     </Router>
   );

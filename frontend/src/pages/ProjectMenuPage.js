@@ -1,15 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const MenuPage = () => {
+const ProjectMenuPage = () => {
   const navigate = useNavigate();
 
   const handleEducationClick = () => {
-    navigate('/education');
+    navigate('/portfolio-project');
   };
 
   const handleProjectClick = () => {
-    navigate('/project-menu');
+    navigate('/portfolio-project');
   };
 
   const handleCoCurricularClick = () => {
@@ -31,28 +31,28 @@ const MenuPage = () => {
           className="relative text-8xl p-5 cursor-pointer"
           onClick={handleEducationClick}
         >
-          <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45 transition-transform duration-300 ease-in-out hover:rotate-90"></span>
-          Education
+          <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45 transition-transform duration-300 ease-in-out group-hover:rotate-90"></span>
+          Portfolio
         </li>
         <li className="relative text-8xl p-5" onClick={handleProjectClick}>
           <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45"></span>
-          Projects
+          FundRaiser.com
         </li>
         <li className="relative text-8xl p-5" onClick={handleCoCurricularClick}>
           <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45"></span>
-          Co - Curricular
+          BlogPost.com
         </li>
         <li className="relative text-8xl p-5" onClick={handleAboutMeClick}>
           <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45"></span>
-          About Me
+          E-commerce Website
         </li>
         <li className="relative text-8xl p-5" onClick={handleCareerClick}>
           <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45"></span>
-          Career
+          FlyAway.com
         </li>
       </ul>
     </div>
   );
 };
 
-export default MenuPage;
+export default ProjectMenuPage;
