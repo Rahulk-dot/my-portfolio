@@ -9,6 +9,7 @@ import AboutMePage from './pages/AboutMePage';
 import CareerPage from './pages/CareerPage';
 import PortfolioProjectPage from './components/PortfolioProjectPage';
 import ProjectMenuPage from './pages/ProjectMenuPage';
+import PrefixProjectPage from './components/PrefixProjectPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/career" element={<CareerPage />} />
         <Route path="/portfolio-project" element={<PortfolioProjectPage />} />
         <Route path="/project-menu" element={<ProjectMenuPage />} />
+        <Route path="/info-or-experience" element={<PrefixProjectPage />} />
       </Routes>
     </Router>
   );
