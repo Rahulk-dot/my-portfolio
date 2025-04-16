@@ -50,6 +50,11 @@ Make sure you have the following installed:
 
    ```bash
    ./start.sh
+   # for linux
+
+   ./start.bat
+   # for windows
+   
    # if it gives an error make the file executable then try
 
 6. To format both frontend and backend run the following command from the root directory
