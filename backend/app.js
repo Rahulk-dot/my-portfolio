@@ -11,12 +11,21 @@ app.use(express.json());
 connectDB();
 
 // Routes
+// CORS Middleware
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://rahul-kaushik-portfolio.s3-website.ap-south-1.amazonaws.com"
+];
+
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:3000"); 
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    next();
-  });
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+  }
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
 app.use('/project', projectRoutes);
 app.use('/user', userRoutes);
 
