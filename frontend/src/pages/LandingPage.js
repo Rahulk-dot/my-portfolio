@@ -5,11 +5,14 @@ import { useNavigate } from 'react-router-dom';
 const LandingPage = () => {
   const [userData, setUserData] = useState(null); // State to store user data
   const navigate = useNavigate();
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
+  const userId = process.env.REACT_APP_USER_ID;
+
 
   // Function to fetch user data by ID using fetch
   const fetchUserData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/user/67ec1ff159308f571f1c348e'); // Replace <userId> with the actual user ID
+      const response = await fetch(`${API_BASE_URL}/user/${userId}`); // Replace userId with the token later 6855ab7c4313c139862bc79e
       const data = await response.json(); // Parse the JSON response
       setUserData(data); // Store the data in state
     } catch (error) {
