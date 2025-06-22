@@ -1,53 +1,52 @@
 import React, { useEffect, useState } from 'react';
-import { FiArrowRight } from 'react-icons/fi'; // For the arrow icon
+import { FiArrowRight } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
-  const [userData, setUserData] = useState(null); // State to store user data
+  const [userData, setUserData] = useState(null);
   const navigate = useNavigate();
   const API_BASE_URL = process.env.REACT_APP_API_URL;
   const userId = process.env.REACT_APP_USER_ID;
 
-
-  // Function to fetch user data by ID using fetch
   const fetchUserData = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/user/${userId}`); // Replace userId with the token later 6855ab7c4313c139862bc79e
-      const data = await response.json(); // Parse the JSON response
-      setUserData(data); // Store the data in state
+      const response = await fetch(`${API_BASE_URL}/user/${userId}`);
+      const data = await response.json();
+      setUserData(data);
     } catch (error) {
-      console.error('Error fetching user data:', error); // Error handling
+      console.error('Error fetching user data:', error);
     }
   };
 
-  // Fetch user data when the component mounts
   useEffect(() => {
-    fetchUserData(); // Call the function to fetch data
+    fetchUserData();
   }, []);
 
   const handleArrowClick = () => {
-    navigate('/menu'); // Navigate to the menu page
+    navigate('/menu');
   };
 
   return (
-    <div className="h-screen w-full bg-black text-white flex flex-col justify-center font-customElements">
-      {/* Display user data */}
+    <div className="h-screen w-full bg-black text-white flex flex-col justify-center  font-customElements relative overflow-hidden">
       {userData ? (
-              <div className="text-left">
-              <h1 className="text-9xl font-bold mb-4 pl-10"> {userData.name} </h1>
-              <p className="text-2xl text-black bg-gray-500 pl-10 w-1/2 font-bold">
-                {userData.designation}
-              </p>
-            </div>
+        <div className="text-left">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-4 break-words px-4 sm:px-10">
+            {userData.name}
+          </h1>
+          <p className="sm:text-lg md:text-xl text-black bg-gray-500 pl-4 pr-4 font-bold w-3/4">
+            {userData.designation}
+          </p>
+        </div>
       ) : (
-        <p className="pl-10 mt-4">Loading user data...</p>
+        <p className="mt-4">Loading user data...</p>
       )}
 
       <div
-        className="absolute bottom-8 right-8 cursor-pointer flex items-center"
+        className="absolute bottom-6 right-4 sm:right-8 cursor-pointer flex items-center"
         onClick={handleArrowClick}
       >
-        <p className="mr-2 text-lg"> Go to Menu </p> <FiArrowRight size={24} />
+        <p className="mr-2 text-sm sm:text-base">Go to Menu</p>
+        <FiArrowRight size={20} />
       </div>
     </div>
   );
