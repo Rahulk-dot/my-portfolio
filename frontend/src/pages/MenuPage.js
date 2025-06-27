@@ -9,7 +9,7 @@ const MenuPage = () => {
     { text: 'Projects', onClick: () => navigate('/project-menu') },
     { text: 'Co - Curricular', onClick: () => navigate('/co-curricular') },
     { text: 'About Me', onClick: () => navigate('/about-me') },
-    { text: 'Career', onClick: () => navigate('/career') },
+    { text: 'Career', onClick: () => navigate('/career') }
   ];
 
   return (
