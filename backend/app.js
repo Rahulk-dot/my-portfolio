@@ -14,9 +14,7 @@ connectDB();
 // CORS Middleware
 const allowedOrigins = [
   "http://localhost:3000",
-  "http://rahul-kaushik-portfolio.s3-website.ap-south-1.amazonaws.com",
   "http://rahulkaushik.in.s3-website.ap-south-1.amazonaws.com",
-  "http://rahulkaushik.in",
   "https://rahulkaushik.in"
 ];
 
