@@ -1,11 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const projectRoutes = require('./routes/projectRoutes');
 const userRoutes = require('./routes/userRoutes');
 const { connectDB } = require('./config/db');
-
-// Middleware
-app.use(express.json());
 
 // Connect to the database
 connectDB();
@@ -19,15 +17,24 @@ const allowedOrigins = [
   'https://www.rahulkaushik.in'
 ];
 
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin);
-  }
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
+// CORS config
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true); // Allow request
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+};
+
+app.use(cors(corsOptions)); // Use cors middleware
+
+// Middleware
+app.use(express.json());
+
+// Routes
 app.use('/project', projectRoutes);
 app.use('/user', userRoutes);
 
