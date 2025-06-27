@@ -16,6 +16,7 @@
   "description": "My own portfolio",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "cors": "^2.8.5",
     "express": "^4.21.1",
     "mongoose": "^8.7.2"
   },
