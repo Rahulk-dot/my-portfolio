@@ -15,7 +15,8 @@ connectDB();
 const allowedOrigins = [
   'http://localhost:3000',
   'http://rahulkaushik.in.s3-website.ap-south-1.amazonaws.com',
-  'https://rahulkaushik.in'
+  'https://rahulkaushik.in',
+  'https://www.rahulkaushik.in'
 ];
 
 app.use((req, res, next) => {
