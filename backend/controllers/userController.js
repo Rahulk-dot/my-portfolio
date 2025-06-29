@@ -40,3 +40,19 @@ exports.getUserById = async (req, res) => {
     });
   }
 };
+
+exports.getUserByUsername = async (req, res) => {
+  try {
+    const item = await User.findOne({ username: req.params.username });
+    if (!item) {
+      return res.status(404).json({
+        message: 'User not found'
+      });
+    }
+    res.json(item);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message
+    });
+  }
+}

@@ -19,7 +19,6 @@ const PrefixProjectPage = () => {
           INFORMATION
         </h1>
       </div>
-      <br />
       <div className="flex flex-row items-center">
         <div className="border-2 outline-white h-0 w-60"></div>
         <h2 className="p-4">OR</h2>
