@@ -6,11 +6,11 @@ const LandingPage = () => {
   const [userData, setUserData] = useState(null);
   const navigate = useNavigate();
   const API_BASE_URL = process.env.REACT_APP_API_URL;
-  const userId = process.env.REACT_APP_USER_ID;
+  const userName = process.env.REACT_APP_USER_NAME;
 
   const fetchUserData = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/user/${userId}`);
+      const response = await fetch(`${API_BASE_URL}/user/name/${userName}`);
       const data = await response.json();
       setUserData(data);
     } catch (error) {
