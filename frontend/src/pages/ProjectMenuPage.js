@@ -1,52 +1,52 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const ProjectMenuPage = () => {
+  const [projectData, setProjectData] = useState([]);
   const navigate = useNavigate();
+  const { username } = useParams();
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
 
-  const handleProjectClick = () => {
-    navigate('/info-or-experience');
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/project/all/${username}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch projects');
+        }
+        const data = await response.json();
+        setProjectData(data);
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+    };
+
+    fetchProjects();
+  }, [username]);
+
+  const handleProjectClick = (project_uuid, site_link) => {
+    navigate(`/info-or-experience/${project_uuid}?site=${encodeURIComponent(site_link)}`);
   };
 
   return (
-    <div className="h-screen w-full bg-black text-white flex overflow-x-auto items-center font-customElements p-20">
-      <ul className="list-none">
-        <li
-          className="relative text-8xl p-5 cursor-pointer"
-          onClick={handleProjectClick}
+    <div className="min-h-screen w-full bg-black text-white p-10 flex flex-wrap gap-10 justify-center items-start font-customElements">
+      {projectData.map((project) => (
+        <div
+          key={project.project_uuid}
+          className="bg-gray-500 p-4 cursor-pointer transition transform hover:scale-105"
+          onClick={() => handleProjectClick(project.project_uuid, project.site_link)}
+          style={{ width: '300px' }}
         >
-          <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45 transition-transform duration-300 ease-in-out group-hover:rotate-90"></span>
-          Portfolio
-        </li>
-        <li
-          className="relative text-8xl p-5 cursor-pointer"
-          onClick={handleProjectClick}
-        >
-          <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45"></span>
-          FundRaiser.com
-        </li>
-        <li
-          className="relative text-8xl p-5 cursor-pointer"
-          onClick={handleProjectClick}
-        >
-          <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45"></span>
-          BlogPost.com
-        </li>
-        <li
-          className="relative text-8xl p-5 cursor-pointer"
-          onClick={handleProjectClick}
-        >
-          <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45"></span>
-          E-commerce Website
-        </li>
-        <li
-          className="relative text-8xl p-5 cursor-pointer"
-          onClick={handleProjectClick}
-        >
-          <span className="absolute -left-10 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rotate-45"></span>
-          FlyAway.com
-        </li>
-      </ul>
+          <div className="bg-black p-4 flex justify-center items-center" style={{ height: '200px' }}>
+            <img
+              src={project.icon}
+              alt={project.name}
+              className="w-16 h-16 object-contain max-h-full border-4 border-gray-500 p-2"
+            />
+          </div>
+          <h2 className="text-black text-center text-xl mt-4 font-semibold">{project.name}</h2>
+        </div>
+      ))}
     </div>
   );
 };

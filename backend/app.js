@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const path = require('path');
 const projectRoutes = require('./routes/projectRoutes');
 const userRoutes = require('./routes/userRoutes');
 const { connectDB } = require('./config/db');
@@ -33,6 +34,9 @@ app.use(cors(corsOptions)); // Use cors middleware
 
 // Middleware
 app.use(express.json());
+
+// Serve static files from the uploads folder
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
 app.use('/project', projectRoutes);

@@ -7,13 +7,6 @@ const PortfolioProjectPage = () => {
         <h1 className="text-8xl">Description</h1>
         <div className="pt-10 pl-10 w-1/2 font-iMFellDoublePica text-3xl">
           <p>
-            This full-stack portfolio website is a comprehensive showcase of my
-            work, combining Node.js, Express.js for the backend, and React.js
-            for the frontend. The project highlights my technical capabilities
-            in web development, offering a seamless user experience from the
-            landing page to the detailed portfolio sections. The portfolio
-            serves as a reflection of my passion for coding, design, and
-            creating responsive, user-friendly applications.
           </p>
         </div>
       </section>

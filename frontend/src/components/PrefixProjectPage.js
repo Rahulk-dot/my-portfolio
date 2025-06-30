@@ -1,15 +1,18 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 
 const PrefixProjectPage = () => {
   const navigate = useNavigate();
+  const { project_uuid } = useParams();
+  const query = new URLSearchParams(useLocation().search);
+  const siteLink = query.get('site');
 
   const handleInformationClick = () => {
-    navigate('/portfolio-project');
+    navigate(`/project/${project_uuid}`);
   };
 
   const handleExperienceClick = () => {
-    window.open('https://startling-stardust-b132f2.netlify.app/', '_blank');
+    window.open(siteLink, '_blank');
   };
 
   return (

@@ -16,15 +16,15 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/menu" element={<MenuPage />} />
-        <Route path="/project" element={<ProjectPage />} />
+        <Route path="/menu/:username" element={<MenuPage />} />
+        <Route path="/project/:project_uuid" element={<ProjectPage />} />
         <Route path="/education" element={<EducationPage />} />
         <Route path="/co-curricular" element={<CoCurricularPage />} />
         <Route path="/about-me" element={<AboutMePage />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/portfolio-project" element={<PortfolioProjectPage />} />
-        <Route path="/project-menu" element={<ProjectMenuPage />} />
-        <Route path="/info-or-experience" element={<PrefixProjectPage />} />
+        <Route path="/project-menu/:username" element={<ProjectMenuPage />} />
+        <Route path="/info-or-experience/:project_uuid" element={<PrefixProjectPage />} />
       </Routes>
     </Router>
   );

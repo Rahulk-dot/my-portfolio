@@ -23,7 +23,7 @@ const LandingPage = () => {
   }, []);
 
   const handleArrowClick = () => {
-    navigate('/menu');
+    navigate(`/menu/${userData ? userData.username : ''}`);
   };
 
   return (

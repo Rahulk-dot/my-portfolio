@@ -11,3 +11,6 @@ yarn-error.log*
 
 # Optional: OS specific files
 .DS_Store
+
+# Ignore uploads folder
+/uploads/
