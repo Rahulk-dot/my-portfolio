@@ -51,7 +51,9 @@ exports.getProjectsByUserUuid = async (req, res) => {
 // Get project by UUID
 exports.getProjectByUuid = async (req, res) => {
   try {
-    const item = await Project.findOne({ project_uuid: req.params.project_uuid });
+    const item = await Project.findOne({
+      project_uuid: req.params.project_uuid
+    });
 
     if (!item) {
       return res.status(404).json({

@@ -18,7 +18,10 @@ const PrefixProjectPage = () => {
   return (
     <div className="h-screen w-full bg-black text-white flex flex-col justify-center items-center font-customElements px-4 py-10 sm:px-6 md:px-10 lg:px-20">
       <div className="mb-10">
-        <h1 className="cursor-pointer text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center" onClick={handleInformationClick}>
+        <h1
+          className="cursor-pointer text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center"
+          onClick={handleInformationClick}
+        >
           INFORMATION
         </h1>
       </div>

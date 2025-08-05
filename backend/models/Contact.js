@@ -1,36 +1,39 @@
 const mongoose = require('mongoose');
 
-const ContactSchema = new mongoose.Schema({
-  user_uuid: {
-    type: String,
-    required: true
+const ContactSchema = new mongoose.Schema(
+  {
+    user_uuid: {
+      type: String,
+      required: true
+    },
+    phoneNumber: {
+      type: String,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true
+    },
+    linkedin: {
+      type: String
+    },
+    github: {
+      type: String
+    },
+    twitter: {
+      type: String
+    },
+    website: {
+      type: String
+    },
+    whatsapp: {
+      type: String
+    }
   },
-  phoneNumber: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  linkedin: {
-    type: String
-  },
-  github: {
-    type: String
-  },
-  twitter: {
-    type: String
-  },
-  website: {
-    type: String
-  },
-  whatsapp: {
-    type: String
+  {
+    timestamps: true
   }
-}, {
-  timestamps: true
-});
+);
 
 ContactSchema.set('toJSON', {
   transform: (doc, ret) => {

@@ -55,4 +55,4 @@ exports.getUserByUsername = async (req, res) => {
       message: error.message
     });
   }
-}
+};

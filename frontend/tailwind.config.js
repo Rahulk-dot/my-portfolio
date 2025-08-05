@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         customElements: ['Cinzel', 'serif'],
-        iMFellDoublePica: ['"IM Fell Double Pica"', 'serif']
+        iMFellDoublePica: ['"IM Fell Double Pica"', 'serif'],
+        Questrial: ['Questrial', 'sans-serif']
       }
     }
   },

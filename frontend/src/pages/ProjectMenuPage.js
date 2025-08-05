@@ -25,7 +25,9 @@ const ProjectMenuPage = () => {
   }, [username]);
 
   const handleProjectClick = (project_uuid, site_link) => {
-    navigate(`/info-or-experience/${project_uuid}?site=${encodeURIComponent(site_link)}`);
+    navigate(
+      `/info-or-experience/${project_uuid}?site=${encodeURIComponent(site_link)}`
+    );
   };
 
   return (
@@ -34,17 +36,24 @@ const ProjectMenuPage = () => {
         <div
           key={project.project_uuid}
           className="bg-gray-500 p-4 cursor-pointer transition transform hover:scale-105"
-          onClick={() => handleProjectClick(project.project_uuid, project.site_link)}
+          onClick={() =>
+            handleProjectClick(project.project_uuid, project.site_link)
+          }
           style={{ width: '300px' }}
         >
-          <div className="bg-black p-4 flex justify-center items-center" style={{ height: '200px' }}>
+          <div
+            className="bg-black p-4 flex justify-center items-center"
+            style={{ height: '200px' }}
+          >
             <img
               src={project.icon}
               alt={project.name}
               className="w-16 h-16 object-contain max-h-full border-4 border-gray-500 p-2"
             />
           </div>
-          <h2 className="text-black text-center text-xl mt-4 font-semibold">{project.name}</h2>
+          <h2 className="text-black text-center text-xl mt-4 font-semibold">
+            {project.name}
+          </h2>
         </div>
       ))}
     </div>

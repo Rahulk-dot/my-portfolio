@@ -24,7 +24,10 @@ function App() {
         <Route path="/career" element={<CareerPage />} />
         <Route path="/portfolio-project" element={<PortfolioProjectPage />} />
         <Route path="/project-menu/:username" element={<ProjectMenuPage />} />
-        <Route path="/info-or-experience/:project_uuid" element={<PrefixProjectPage />} />
+        <Route
+          path="/info-or-experience/:project_uuid"
+          element={<PrefixProjectPage />}
+        />
       </Routes>
     </Router>
   );

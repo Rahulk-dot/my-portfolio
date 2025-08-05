@@ -6,8 +6,7 @@ const PortfolioProjectPage = () => {
       <section className="h-screen snap-start snap-always bg-black text-white p-10 flex flex-col justify-center items-center">
         <h1 className="text-8xl">Description</h1>
         <div className="pt-10 pl-10 w-1/2 font-iMFellDoublePica text-3xl">
-          <p>
-          </p>
+          <p></p>
         </div>
       </section>
 

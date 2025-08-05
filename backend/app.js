@@ -4,6 +4,7 @@ const app = express();
 const path = require('path');
 const projectRoutes = require('./routes/projectRoutes');
 const userRoutes = require('./routes/userRoutes');
+const educationRoutes = require('./routes/educationRoutes');
 const { connectDB } = require('./config/db');
 
 // Connect to the database
@@ -27,7 +28,7 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true,
+  credentials: true
 };
 
 app.use(cors(corsOptions)); // Use cors middleware
@@ -41,6 +42,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Routes
 app.use('/project', projectRoutes);
 app.use('/user', userRoutes);
+app.use('/education', educationRoutes);
 
 // Error handling middleware
 app.use(require('./middlewares/errorHandler'));
