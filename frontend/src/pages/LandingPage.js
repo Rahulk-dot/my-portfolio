@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaWhatsapp, FaLinkedin, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 
 const LandingPage = () => {
   const [userData, setUserData] = useState(null);
@@ -72,6 +73,51 @@ const LandingPage = () => {
                 <p className="relative z-10 text-white text-2xl sm:text-3xl font-extrabold tracking-wide uppercase p-4">
                   About Me
                 </p>
+              </div>
+
+              {/* Contact Box */}
+              <div
+                className="w-full sm:w-[300px] h-[300px] bg-cover bg-center shadow-2xl cursor-pointer flex items-center justify-center relative group transition-all duration-300"
+                style={{ backgroundImage: "url('/assets/background5.jpg')" }}
+              >
+                <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300"></div>
+                <div className="relative z-10 grid grid-cols-2 gap-8 text-white text-5xl">
+                  {/* WhatsApp */}
+                  <a
+                    href="https://wa.me/9958600653"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-green-400 transition flex justify-center"
+                  >
+                    <FaWhatsapp />
+                  </a>
+                  {/* LinkedIn */}
+                  <a
+                    href="https://www.linkedin.com/in/rahul-kaushik-561435217/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-400 transition flex justify-center"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  {/* Email */}
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=rahul.kaushik0719@gmail.com"
+                    target='_blank'
+                    className="hover:text-red-400 transition flex justify-center"
+                  >
+                    <FaEnvelope />
+                  </a>
+                  {/* Resume */}
+                  <a
+                    href="/assets/cv_rahul_1.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-yellow-400 transition flex justify-center"
+                  >
+                    <FaFileAlt />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
