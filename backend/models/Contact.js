@@ -23,11 +23,14 @@ const ContactSchema = new mongoose.Schema(
     twitter: {
       type: String
     },
-    website: {
+    instagram: {
       type: String
     },
     whatsapp: {
       type: String
+    },
+    resume: {
+      type: String // S3 URL
     }
   },
   {

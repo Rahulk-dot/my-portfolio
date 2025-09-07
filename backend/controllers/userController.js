@@ -56,3 +56,24 @@ exports.getUserByUsername = async (req, res) => {
     });
   }
 };
+
+exports.updateUserByUsername = async (req, res) => {
+  try {
+    const updatedData = req.body;
+    const item = await User.findOneAndUpdate(
+      { username: req.params.username },
+      updatedData,
+      { new: true }
+    );
+    if (!item) {
+      return res.status(404).json({
+        message: 'User not found'
+      });
+    }
+    res.json(item);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message
+    });
+  }
+};

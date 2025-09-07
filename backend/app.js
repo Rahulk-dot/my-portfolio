@@ -5,6 +5,8 @@ const path = require('path');
 const projectRoutes = require('./routes/projectRoutes');
 const userRoutes = require('./routes/userRoutes');
 const educationRoutes = require('./routes/educationRoutes');
+const contactRoutes = require('./routes/contactRoutes');
+const aboutMeRoutes = require('./routes/aboutMeRoutes');
 const { connectDB } = require('./config/db');
 
 // Connect to the database
@@ -43,6 +45,8 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/project', projectRoutes);
 app.use('/user', userRoutes);
 app.use('/education', educationRoutes);
+app.use('/contact', contactRoutes);
+app.use('/about-me', aboutMeRoutes);
 
 // Error handling middleware
 app.use(require('./middlewares/errorHandler'));
