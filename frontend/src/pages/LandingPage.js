@@ -102,7 +102,7 @@ const LandingPage = () => {
                     {/* WhatsApp */}
                     {contactData.whatsapp && (
                       <a
-                        title='Chat on WhatsApp'
+                        title="Chat on WhatsApp"
                         href={contactData.whatsapp}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -114,7 +114,7 @@ const LandingPage = () => {
                     {/* LinkedIn */}
                     {contactData.linkedin && (
                       <a
-                        title='Visit LinkedIn Profile'
+                        title="Visit LinkedIn Profile"
                         href={contactData.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -126,7 +126,7 @@ const LandingPage = () => {
                     {/* Email */}
                     {contactData.email && (
                       <a
-                        title='Send Email'
+                        title="Send Email"
                         href={`https://mail.google.com/mail/?view=cm&fs=1&to=${contactData.email}`}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -138,7 +138,7 @@ const LandingPage = () => {
                     {/* Resume */}
                     {contactData.resume && (
                       <a
-                        title='View Resume'
+                        title="View Resume"
                         href={contactData.resume}
                         target="_blank"
                         rel="noopener noreferrer"

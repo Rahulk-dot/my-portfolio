@@ -78,7 +78,7 @@ const AboutMePage = () => {
         <div className="fixed top-1/2 right-3 sm:right-6 transform -translate-y-1/2 flex flex-col gap-4 sm:gap-6 text-xl sm:text-2xl md:text-3xl">
           {contactData.github && (
             <a
-              title='Visit GitHub Profile'
+              title="Visit GitHub Profile"
               href={contactData.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -89,7 +89,7 @@ const AboutMePage = () => {
           )}
           {contactData.linkedin && (
             <a
-              title='Visit LinkedIn Profile'
+              title="Visit LinkedIn Profile"
               href={contactData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -100,7 +100,7 @@ const AboutMePage = () => {
           )}
           {contactData.email && (
             <a
-              title='Send Email'
+              title="Send Email"
               href={`mailto:${contactData.email}`}
               className="hover:text-red-400 transition"
             >
@@ -109,7 +109,7 @@ const AboutMePage = () => {
           )}
           {contactData.phoneNumber && (
             <a
-              title='Call Phone Number'
+              title="Call Phone Number"
               href={`tel:${contactData.phoneNumber}`}
               className="hover:text-green-400 transition"
             >
