@@ -10,8 +10,6 @@ import CareerPage from './pages/CareerPage';
 import PortfolioProjectPage from './components/PortfolioProjectPage';
 import ProjectMenuPage from './pages/ProjectMenuPage';
 import PrefixProjectPage from './components/PrefixProjectPage';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
   return (
